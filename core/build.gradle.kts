@@ -93,7 +93,7 @@ kotlin {
                 api(libs.compose.ui.text)
             }
         }
-        val androidTest by getting {
+        val androidUnitTest by getting {
             dependsOn(jvmTest)
         }
 
@@ -122,4 +122,8 @@ dependencies {
 
 buildkonfig {
     packageName = "ca.gosyer.jui.core.build"
+}
+
+android {
+    namespace = "ca.gosyer.jui.core"
 }

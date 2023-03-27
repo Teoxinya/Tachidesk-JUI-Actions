@@ -94,6 +94,7 @@ dependencies {
 }
 
 android {
+    namespace = "ca.gosyer.jui.android"
     defaultConfig {
         applicationId = "ca.gosyer.jui.android"
         versionCode = migrationCode
@@ -126,5 +127,11 @@ android {
             "META-INF/*.kotlin_module",
             "META-INF/*.version",
         ))
+    }
+}
+
+kotlin {
+    jvmToolchain {
+        languageVersion.set(JavaLanguageVersion.of(Config.androidJvmTarget.majorVersion))
     }
 }

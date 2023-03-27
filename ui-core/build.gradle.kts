@@ -91,7 +91,7 @@ kotlin {
                 api(libs.androidx.appCompat)
             }
         }
-        val androidTest by getting {
+        val androidUnitTest by getting {
             dependsOn(jvmTest)
         }
 
@@ -115,4 +115,8 @@ kotlin {
 
 buildkonfig {
     packageName = "ca.gosyer.jui.uicore.build"
+}
+
+android {
+    namespace = "ca.gosyer.jui.uicore"
 }

@@ -49,6 +49,9 @@ kotlin {
 
 tasks {
     registerLocalizationTask(project)
+
+    getByName("desktopProcessResources")
+        .dependsOn("generateMRcommonMain", "generateMRdesktopMain")
 }
 
 multiplatformResources {
@@ -56,6 +59,7 @@ multiplatformResources {
 }
 
 android {
+    namespace = "ca.gosyer.jui.i18n"
     lint {
         disable += "MissingTranslation"
     }

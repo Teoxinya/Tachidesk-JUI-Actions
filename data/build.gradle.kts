@@ -81,7 +81,7 @@ kotlin {
         val androidMain by getting {
             dependsOn(jvmMain)
         }
-        val androidTest by getting {
+        val androidUnitTest by getting {
             dependsOn(jvmTest)
         }
 
@@ -117,4 +117,8 @@ dependencies {
 
 buildkonfig {
     packageName = "ca.gosyer.jui.data.build"
+}
+
+android {
+    namespace = "ca.gosyer.jui.data"
 }

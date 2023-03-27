@@ -113,7 +113,7 @@ kotlin {
                 api(libs.voyager.androidx)
             }
         }
-        val androidTest by getting {
+        val androidUnitTest by getting {
             dependsOn(jvmTest)
         }
 
@@ -149,4 +149,8 @@ dependencies {
 
 buildkonfig {
     packageName = "ca.gosyer.jui.presentation.build"
+}
+
+android {
+    namespace = "ca.gosyer.jui.presentation"
 }
